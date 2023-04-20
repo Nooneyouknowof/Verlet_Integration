@@ -1,0 +1,28 @@
+<Title>2D Physics Engine</Title>
+<body>
+    <div id="main">
+        <div id="Frame">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="menu_title">Menu</div>
+        <div class="divider_bkg" style="top: 13%;">Settings</div>
+        <div class="divider" style="top: 13%;"></div>
+        <div class="box" style="top: 17%;">Parallax<input type="range" min="0" max="10" value="1" step="0.01" id="Parallax"></input></div>
+        <div class="box" style="top: 24%;">Width<input type="range" min="50" max="100" value="80" step="0.01" id="Sim_Width"></input></div>
+        <div class="box" style="top: 31%;">Height<input type="range" min="50" max="100" value="80" step="0.01" id="Sim_Height"></input></div>
+        <div class="box" style="top: 38%;">Size<input type="range" min="1" max="100" value="10" step="1" id="Ball_Size"></input></div>
+        <div class="box" style="top: 45%;">Count<input type="range" min="10" max="100000" value="100" step="1" id="Ball_Count"></input></div>
+        <div class="box" style="top: 52%;">Gravity<input type="range" min="0" max="1" value="0.1" step="0.001" id="Sim_Gravity"></input></div>
+        <div class="box" style="top: 59%;">Friction<input type="range" min="0" max="1" value="0.99" step="0.0000001" id="Sim_Friction"></input></div>
+        <div class="box" style="top: 66%;">Bounce<input type="range" min="0" max="1" value="0.5" step="0.01" id="Sim_Bounceyness"></input></div>
+        <button type="button" class="reset_box" style="top: 95%;" onclick="reset()" id="reset">Reset</button>
+    </div>
+</body>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Iceland">
+    <link rel="icon" type="image/png" href="images/eyetom.gif">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>

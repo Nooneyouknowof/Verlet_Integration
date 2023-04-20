@@ -1,0 +1,209 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: black;
+    overflow: hidden;
+}
+
+#Frame {
+    background-color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    z-index: 9;
+}
+
+#menu {
+    background-color: rgb(51, 56, 64);
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    width: 20%;
+    height: 100%;
+    z-index: 10;
+}
+
+#menu_title {
+    position: absolute;
+    top: 2.5%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    font-size: 600%;
+    font-weight: 650;
+    font-family: Iceland;
+    text-align: center;
+    color: white;
+    animation: shake 20s;
+    animation-iteration-count: infinite;
+}
+
+#main {
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 80%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(-2deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+}
+
+@keyframes neon {
+    0% {
+      text-shadow: -1px -1px 1px, -1px 1px 1px, 1px -1px 1px, 1px 1px 1px,
+      0 0 3px, 0 0 10px, 0 0 20px,
+      0 0 30px, 0 0 40px;
+    }
+    50% {
+      text-shadow: -1px -1px 1px, -1px 1px 1px, 1px -1px 1px, 1px 1px 1px,
+      0 0 5px, 0 0 15px, 0 0 25px,
+      0 0 40px, 0 0 50px;
+    }
+    100% {
+      text-shadow: -1px -1px 1px, -1px 1px 1px, 1px -1px 1px, 1px 1px 1px,
+      0 0 3px, 0 0 10px, 0 0 20px,
+      0 0 30px, 0 0 40px;
+    }
+}
+
+input {
+    background: #d3d3d3;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 20%;
+    margin: 0%;
+    appearance: none;
+    outline: none;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+input:hover {
+    opacity: 1;
+}
+
+input:disabled {
+    opacity: 0.1;
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(51, 56, 64);
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.box {
+    background-color: rgb(62, 68, 77);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80%;
+    height: 5%;
+    font-family: Iceland;
+    font-size: 200%;
+    color: white;
+    animation: neon 3s;
+    animation-iteration-count: infinite;
+    line-height: 0%;
+    text-indent: 10%;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.reset_box {
+    background-color: rgb(82, 58, 58);
+    display: inline-block;
+    align-items: center;
+    position: absolute;
+    border: none;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.4s;
+    left: 50%;
+    width: 80%;
+    height: 5%;
+    font-family: Iceland;
+    font-size: 200%;
+    color: red;
+    animation: neon 3s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    line-height: 0%;
+    border-radius: 5px;
+}
+
+.reset_box:hover {
+    background-color: white;
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+
+.reset_box:active {
+    background-color: white;
+    border-style: solid;
+    border-width: 0px;
+    transition-duration: 0s;
+    width: 90%;
+    height: 6%;
+}
+
+.reset_box:disabled {
+    background-color: rgb(135, 109, 109);
+    color: gray;
+}
+
+.reset_box:hover:disabled {
+    border-style: solid;
+    border-color: gray;
+    border-width: 4px;
+}
+
+.divider {
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1px;
+    left: 50%;
+}
+
+.divider_bkg {
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Iceland;
+    line-height: 0%;
+    left: 50%;
+}
