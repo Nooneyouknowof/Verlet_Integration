@@ -164,9 +164,10 @@ window.onload = function() {
         RenderPoints();
         requestAnimationFrame(Update);
     }
-    function onready(arg) {
+    function onready(arg, rloop) {
         if (arg == true) {
             requestAnimationFrame(Update);
+            clearInterval(rloop);
         } else {
     
         }
@@ -176,8 +177,8 @@ window.onload = function() {
         ready = true
     },1000);
 
-    setInterval(function(){
-        onready(ready)
+    var rloop = setInterval(function(){
+        onready(ready, rloop);
     },10);
 }
 
