@@ -164,5 +164,21 @@ window.onload = function() {
         RenderPoints();
         requestAnimationFrame(Update);
     }
-    requestAnimationFrame(Update);
+    function onready(arg) {
+        if (arg == true) {
+            requestAnimationFrame(Update);
+        } else {
+    
+        }
+    }
+    var ready = false
+    setTimeout(function(){
+        ready = true
+    },1000);
+
+    setInterval(function(){
+        onready(ready)
+    },10);
 }
+
+
