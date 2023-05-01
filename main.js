@@ -2,9 +2,6 @@
 /*
     Physics Engine made by Octavio McNaughton
     Verlet integration algorithm
-
-    This project was made possible(*Easier*) with ChatGPT
-    special thanks to https://chat.openai.com
 */
 
 var Frame = document.getElementById("Frame");
